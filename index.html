@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator With Options</title>
+    <!-- bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-body-tertiary">
+    <h1 class="text-primary shadow text-opacity-50 bg-white text-center p-3">
+      Password Generator With Options
+    </h1>
+
+    <div class="container pt-3 pb-5">
+      <div
+        class="upper p-2 border border-info border-opacity-75 mt-4 d-flex flex-column flex-md-row align-items-center bg-white rounded"
+      >
+        <label
+          for="password-length"
+          class="d-flex flex-column w-100 gap-2 fs-3 text-center p-3 fw-bold text-info text-opacity-75 flex-grow-1"
+        >
+          Password Length
+          <input
+            class="form-control w-100"
+            type="text"
+            placeholder="Password Length {1,40}"
+            id="password-length"
+            value="5"
+          />
+        </label>
+        <label
+          style="cursor: pointer"
+          for="numbers"
+          class="d-flex flex-column w-100 gap-2 fs-3 text-center p-3 fw-bold text-info text-opacity-75 flex-grow-1"
+        >
+          Numbers
+          <input
+            type="checkbox"
+            style="height: 28px; accent-color: #0dcaf0bf; cursor: pointer"
+            checked
+            id="numbers"
+          />
+        </label>
+        <label
+          style="cursor: pointer"
+          for="special"
+          class="d-flex flex-column w-100 gap-2 fs-3 text-center p-3 fw-bold text-info text-opacity-75 flex-grow-1"
+        >
+          Special Chars
+          <input
+            type="checkbox"
+            style="height: 28px; accent-color: #0dcaf0bf; cursor: pointer"
+            checked
+            id="special"
+          />
+        </label>
+      </div>
+      <button
+        class="btn bg-info bg-opacity-75 w-100 d-block fs-3 text-capitalize fw-bold text-white mt-4"
+        id="btn-generate"
+      >
+        generate password
+      </button>
+
+      <div
+        id="output-password"
+        class="apper-password p-4 text-break bg-info-subtle mt-3 rounded-pill text-center border border-primary-subtle fs-3 fw-bold text-info-emphasis text-center"
+      >
+        Password Will Appear Here
+      </div>
+
+      <h3
+        class="text-center my-4 p-3 bg-primary-subtle rounded text-center text-info-emphasis border border-primary-subtle"
+      >
+        Latest 15 Generated Passwords
+      </h3>
+      <button
+        class="btn bg-danger d-none bg-opacity-75 w-100 d-block fs-3 text-capitalize fw-bold text-white mt-4"
+        id="btn-delete-all"
+      >
+        Delete All 
+      </button>
+      <div class="results"></div>
+    </div>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- file js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

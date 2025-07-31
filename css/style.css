@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+#btn-generate {
+  transition: 0.3s;
+}
+#btn-generate:hover {
+  background-color: rgb(1, 104, 104) !important;
+}
+#btn-delete-all:hover {
+  background-color: rgb(150, 5, 5) !important;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+.delete-item:hover {
+  background-color: rgb(150, 5, 5) !important;
+}
